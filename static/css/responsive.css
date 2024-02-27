@@ -1,0 +1,74 @@
+    /* Tablet media query*/
+    @media (max-width:1007px) {
+    html {
+    font-size: 12px;
+    }
+    .about-section {
+    flex-direction: column;
+    }
+    .about-description-container {
+    width: 100%;
+    }
+    .about-image-container {
+    margin-bottom: 4rem;
+    }
+    .tags-container {
+    width: 75%;
+    }
+    /* project section*/
+
+    .project-card {
+    width: 100%;
+    }
+
+    .project-card a img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: center 10%;
+
+    }
+    .project-card a {
+    width: 100%;
+    height: min-content;
+    flex-direction: column;
+    }
+    }
+
+    /* Phone*/
+
+    @media (max-width: 640px) {
+    html {
+    font-size: 10px;
+    }
+    .nav-btn {
+    display: inline-flex;
+    }
+
+    .nav-link {
+    flex-direction: column;
+    }
+
+    header {
+    height: max-content;
+    flex-direction: column;
+    padding: 2%;
+    }
+
+    /* Toggle Function*/
+    /*is the box unchecked? */
+    /*Oldest ~ youngest*/
+    #nav-check:not(:checked) ~ .nav-link {
+    height: 0px;
+    overflow: hidden;
+    }
+
+    #nav-check:checked ~ .nav-link {
+    height: auto;
+    overflow: auto;
+    }
+
+    /* About Section*/
+
+    }
+  

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}About me{% endblock title %}
+{% load static %}
+{% block content %}
+    <section class="about-section center-row">
+
+    <div class="about-image-container center-row">
+            <img src="{% static 'img/webResult.jpg' %}" alt="">
+    </div>
+
+    <div class="about-description-container center-column">
+        <div class="center-column">
+        <h1>Eric Wells</h1>
+        <h2>Developer</h2>
+    </div>
+        <p>Lorem ipsum dolor sit amet consectetur. Arcu in non faucibus metus quis. Laoreet sagittis faucibus tempor varius et aenean adipiscing quisque. Ac mattis consequat varius ut. Non ut sed enim sit pharetra adipiscing elementum senectus. Egestas maecenas augue a tincidunt neque imperdiet nullam facilisis. Eget id hac faucibus dictum <br><br>
+            lus sed at odio. Eget ante purus cursus sagittis commodo montes vulputate. Morbi suscipit in ipsum fermentum et dui dui. Arcu felis cras duis quam neque. Ut mauris amet morbi bibendum.iquam mauris blandit dolor aliquet morbi mattis dolor at id. Enim iaculis molestie amet laoreet euismod mattis. Eget rhoncus fringilla pellentesque amet faucibus pellentesque. Velit volutpat purus nunc id mi molestie in. </p>
+            
+        <div class="skill-list center-column">
+
+                <h2>My Skills</h2>
+                <div class="tags-container center-row">
+                    <label class="label-text" >HTML</label>  
+                    <label class="label-text" >JavaScript</label>   
+                    <label class="label-text" >Django</label>  
+                    <label class="label-text" >Python</label> 
+                    <label class="label-text" >React</label> 
+                    <label class="label-text" >Web API</label> 
+                    <label class="label-text" >UX Responsive Design</label> 
+                    <label class="label-text" >SQLlite</label> 
+                    <label class="label-text" >Ubuntu</label> 
+                    <label class="label-text" >Visual Studio</label>
+                </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+{% endblock content %}

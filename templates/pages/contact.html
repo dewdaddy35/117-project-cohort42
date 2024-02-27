@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Me {% endblock title %}
+{% load static %}
+
+{% block content %}
+<section id="contact" class="project-section center-column">
+<h2 class="contact-h2">Contact Me</h2>
+
+<!--<form class="center-column" action="" method="post" id="emailForm">
+    {% csrf_token %}
+    <input class="input" type="text" id="name" placeholder="name" required> <br>
+    <input class="input" type="text" id="email" placeholder="email" required> <br>
+    <input class="input" type="text" id="subject" placeholder="subject" required> <br>
+    <textarea id="message" rows="10" cols="73" placeholder="Message" required></textarea>
+    <div class="button center-row">
+        <button class="primary-button" type="submit">Send Email</button>
+        <button class="secondary-button" type="button">Reset</button>
+    </div>
+
+</form>-->
+
+    <form class="center-column" action="" method="post">
+        {% csrf_token %}
+
+        {{ form.name}}
+        {{ form.email}}
+        {{ form.message}}
+
+        <div class="controls">
+        <button type="reset" class="secondary-button button-send">Reset form</button>
+        <button class="primary-button button-reset">Send Email</button>
+    </div>
+    </form>
+
+</section>
+
+{% endblock content %}
