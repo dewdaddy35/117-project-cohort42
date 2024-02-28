@@ -7,9 +7,6 @@ def home(request):
     return render(request, 'pages/about_me.html')
 
 
-def test_view(request):
-    return render(request, 'pages/test.html')
-
 def project(request):
     return render(request, 'pages/project.html')
 
