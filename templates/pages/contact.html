@@ -20,7 +20,7 @@
 
 </form>-->
 
-    <form class="center-column" action="" method="post">
+    <form id="emailForm" action="" method="post">
         {% csrf_token %}
 
         {{ form.name}}
@@ -28,8 +28,8 @@
         {{ form.message}}
 
         <div class="controls">
-        <button type="reset" class="secondary-button button-send">Reset form</button>
-        <button class="primary-button button-reset">Send Email</button>
+        <button type="reset" class="secondary-button">Reset form</button>
+        <button class="primary-button">Send Email</button>
     </div>
     </form>
 

@@ -1,7 +1,7 @@
 
     header {
     background-color: var(--secondary-color);
-    height: 60px;
+    height: 75px;
     position: sticky;
     top: 0px;
     }
@@ -14,13 +14,13 @@
 
     /* right-side*/
     nav {
-    width: 80%;
+    width: 65%;
     height: 100%;
     }
 
     .nav-link {
     height: 100%;
-    width: 100%;
+    width: 95%;
 
     }
 
@@ -28,7 +28,7 @@
     color: var(--neutral-color);
     font-size: 1rem;
     text-transform: uppercase;
-    margin: 2%;
+    margin: 0px 1rem;
     padding: 1% 2%;
     }
 
