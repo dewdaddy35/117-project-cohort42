@@ -1,5 +1,6 @@
 from django.db import models
 
+# Create your models here.
 class Skill(models.Model):
     name = models.CharField(max_length=100)
 
@@ -7,7 +8,6 @@ class Skill(models.Model):
         return self.name
 
 
-# Create your models here.
 class Project(models.Model):
     name = models.CharField(max_length=225)
     description = models.TextField()
@@ -18,3 +18,14 @@ class Project(models.Model):
 
     def __str__(self):
         return f"{self.name} - ({self.year})"
+
+
+class Experience(models.Model):
+    entity = models.CharField(max_length=100)
+    title = models.CharField(max_length=225)
+    description = models.TextField()
+    period = models.CharField(max_length=50)
+    skill = models.ManyToManyField(Skill)
+
+    def __str__(self):
+        return f"{self.title} at {self.entity}"

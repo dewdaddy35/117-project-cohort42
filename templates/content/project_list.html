@@ -5,70 +5,46 @@
 {% load static %}
 
 {% block content %}
-    <section class="project-section center-column">
-    <h2>Projects</h2>
+<section class="project-section center-column">
+
+    {% if user.is_authenticated %}
+    <div class="add-project-container">
+        <a href="{% url 'project_new' %}">
+            <button class="primary-button">Add Project</button>
+        </a>
+    </div>
+    {% endif %}
+
+        <h2>Projects</h2>
+
+        
+        
 
     <div class="project-list center-row">
         <!-- All the project cards-->
-        
-        
+        {% for project in projects %}
+
         <div class="project-card center-row">
-            <a href="https://www.github.com/" target="_blank">
-            <img src="{% static 'img/picture-1.jpg' %}" alt="">
+            <a href="{{ project.repository }}" target="_blank">
+            <img src="{{ project.image }}">
 
-            <p>Blog</p>
-            <p>Created a blog website so that people can make comments. Other people can see their post in blog and comment.</p>
-            <P>2023</P>
-                <div class="skill-container center-row">
-                    <label class="label-text" >Skill 1</label>  
-                    <label class="label-text" >Tech 1</label>   
-                    <label class="label-text" >Skill 2</label>  
-                    <label class="label-text" >Tech 2</label> 
-                </div>
+                <p>{{ project.name }}</p>
+                <p>{{ project.description }}.</p>
+                    <P>{{ project.year }}</P>
+            <div class="skill-container center-row">
+                {% for skill in project.skill.all %}
+            <label class="label-text">{{ skill.name }}</label>  
+            {% endfor %}
+            
+            </div>
             </a>       
 
         </div>
-        <div class="project-card">
-            <a href="https://www.github.com/" target="_blank">
-            <img src="{% static 'img/picture-2.jpg' %}" alt="">
-
-            <p>Real Estate</p>
-            <p>Created a blog website so that people can make comments. Other people can see their post in blog and comment.</p>
-            <P>2023</P>
-                <div class="skill-container center-row">
-                    <label class="label-text" >Skill 1</label>  
-                    <label class="label-text" >Tech 1</label>   
-                    <label class="label-text" >Skill 2</label>  
-                    <label class="label-text" >Tech 2</label> 
-                    
-                </div>
-            </a>       
-
-        </div>
-        <div class="project-card center-row">
-            <a href="https://www.github.com/" target="_blank">
-            <img src="{% static 'img/picture-3.jpg'%}" alt="">
-
-            <p>Issue Manager</p>
-            <p>Created a blog website so that people can make comments. Other people can see their post in blog and comment.</p>
-            <P>2023</P>
-                <div class="skill-container center-row">
-                    <label class="label-text" >Skill 1</label>  
-                    <label class="label-text" >Tech 1</label>   
-                    <label class="label-text" >Skill 2</label>  
-                    <label class="label-text" >Tech 2</label> 
-                    
-                </div>
-            </a>       
-
-        </div>
-
-
+        {% endfor %}
     </div>
 
+</section>
 
-    </section>
-    
 
 
 
